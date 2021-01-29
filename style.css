@@ -125,3 +125,7 @@ nav ul li a:hover, a.active{
 .price{
     color: #E33741;
 }
+
+.booking-btn:hover{
+    box-shadow: 2px 2px 10px tomato
+}

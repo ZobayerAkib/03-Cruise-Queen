@@ -120,11 +120,11 @@
                         <h4>Total :</h4>
                     </div>
                     <div class="right">
-                        <h4 style="color: #E33741;font-weight: bold;" id="grand-total">$00</h4>
+                        <h4 style="color: #E33741; font-weight: bold;" id="grand-total">$00</h4>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="bookingButton()"  class="btn-style booking-btn">Book Now</button>
         </div>
 
 
@@ -158,8 +158,8 @@
                 const vat = Math.round(totalPrice * 0.1);
                 document.getElementById('vat-amount').innerText = '$' + vat;
 
-                const grandTotal = totalPrice + tax;
-                document.getElementById('grand-total').innerText = '$' + grandTotal;
+                const grandTotal = totalPrice + vat;
+                document.getElementById('grand-total').innerText = '$' +grandTotal;
             }
 
             function getInputValue(numberOfTickets) {
@@ -168,6 +168,13 @@
                 const ticketsCount = parseInt(ticketsInput.value);
                 return ticketsCount;
             }
+
+            //Alert message after clicking "Book Now" button.
+
+            function bookingButton(){
+                alert("Successfully Booked.Thank You !")   
+            }
+            
         </script>
     </main>
 
